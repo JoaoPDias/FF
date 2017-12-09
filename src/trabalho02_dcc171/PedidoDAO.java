@@ -107,7 +107,7 @@ public class PedidoDAO {
         boolean alterado = false;
         while ((s = br.readLine()) != null) {
             Pedido p = Pedido.ToObject(s);
-            if (p.getMesa().getNumMesa() == pedido.getMesa().getNumMesa() && p.getNumPedido() == pedido.getNumPedido() && p.getHoraFechamento() != null) {
+            if (p.getMesa().getNumMesa() == pedido.getMesa().getNumMesa() && p.getNumPedido() == pedido.getNumPedido() && p.getHoraFechamento() == null) {
                 p.setConta(false);
                 p.setHoraFechamento(LocalTime.now());
                 alterado = true;
